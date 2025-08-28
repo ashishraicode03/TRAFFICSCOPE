@@ -53,3 +53,5 @@ TrafficScope/
 ├── styles.css
 └── README.md
 ```
+<img width="1920" height="1080" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/9e1b1511-4c92-4ca6-94c2-8e6f79cb5057" />
+<img width="1920" height="1080" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/438551fb-8c8f-47d8-bf31-765ad94e731d" />
