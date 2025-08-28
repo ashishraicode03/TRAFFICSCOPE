@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TrafficScope Options</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body{ width:auto; max-width:680px; }
+      label{ display:block; font-size:12px; color:#555; margin-top:10px; }
+      input[type="text"]{ width:100%; padding:8px; border:1px solid #ddd; border-radius:10px; }
+      .row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      .muted{ font-size:12px; color:#666; }
+      .save{ margin-top:12px; padding:10px 14px; border:0; background:#111; color:#fff; border-radius:10px; cursor:pointer; }
+      .note{ font-size:12px; background:#f7f7f7; border:1px solid #eee; border-radius:10px; padding:10px; }
+      .switch{ display:flex; align-items:center; gap:8px; margin-top:8px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TrafficScope Settings</h1>
+      <p class="note">
+        Provide your <b>RapidAPI</b> key for a Similarweb-compatible API. You can use providers like
+        “Similarweb” on RapidAPI. If left empty, TrafficScope runs in <b>Demo Mode</b> with mock data.
+      </p>
+
+      <div class="row">
+        <div>
+          <label>Base URL</label>
+          <input id="baseUrl" type="text" placeholder="https://similarweb12.p.rapidapi.com" />
+        </div>
+        <div>
+          <label>RapidAPI Host Header</label>
+          <input id="hostHeader" type="text" placeholder="similarweb12.p.rapidapi.com" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Visits Endpoint (suffix)</label>
+          <input id="epVisits" type="text" placeholder="/v1/website/visits?domain=" />
+        </div>
+        <div>
+          <label>Top Countries Endpoint (suffix)</label>
+          <input id="epGeo" type="text" placeholder="/v1/website/top-countries?domain=" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Top Referrers Endpoint (suffix)</label>
+          <input id="epRef" type="text" placeholder="/v1/website/top-referrers?domain=" />
+        </div>
+        <div>
+          <label>RapidAPI Key</label>
+          <input id="apiKey" type="text" placeholder="Your X-RapidAPI-Key" />
+        </div>
+      </div>
+
+      <div class="switch">
+        <input id="useMock" type="checkbox" />
+        <label for="useMock">Force Demo Mode (use mock data)</label>
+      </div>
+
+      <button class="save" id="saveBtn">Save Settings</button>
+
+      <p class="muted">Note: Endpoints differ by provider. Use the placeholders above as a starting point.</p>
+    </div>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

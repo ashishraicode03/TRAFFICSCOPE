@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "TrafficScope \u2014 Website Traffic Analyzer",
+  "description": "Analyze any website's traffic: estimated visits, top countries, and top referrers using Similarweb-like APIs (RapidAPI). Includes demo mode.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_title": "TrafficScope",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.rapidapi.com/*",
+    "https://*.similarweb.com/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
